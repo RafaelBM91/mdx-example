@@ -1,0 +1,44 @@
+{
+  "name": "mdx-example",
+  "version": "1.0.0",
+  "description": "mdx example with react",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "md",
+    "mdx",
+    "react",
+    "typescript",
+    "babel",
+    "webpack",
+    "components",
+    "node"
+  ],
+  "author": "rafaelbm91 <rafaelbm9126@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^11.13.6",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.4.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@mdx-js/loader": "^1.0.0-rc.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-command": "^0.4.2",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
