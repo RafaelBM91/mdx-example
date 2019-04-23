@@ -2,6 +2,7 @@ const path = require('path');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -15,7 +16,15 @@ module.exports = {
     devServer: {
         open: true,
         hot: true,
-        host: '0.0.0.0'
+        host: 'localhost'
+    },
+    resolve: {
+        modules: [path.resolve(__dirname, './src'), 'node_modules'],
+        extensions: ['.mdx', '.ts', '.tsx', '.js'],
+        alias: {
+            '@app': path.resolve(__dirname, './src'),
+            '@assets': path.resolve(__dirname, './src/assets')
+        }
     },
     module: {
         rules: [
@@ -34,10 +43,18 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(jsx|js)?$/,
+                test: /\.js?$/,
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'image'
+                },
             }
         ]
     },
@@ -47,5 +64,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/assets/template/index.html',
         }),
+        new CleanWebpackPlugin()
     ]
 };
