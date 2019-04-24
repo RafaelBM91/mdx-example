@@ -1,4 +1,11 @@
 import * as  React from 'react';
 import { ContextModel } from './model';
 
-export const ListContext = React.createContext<ContextModel>({} as any);
+const initial: ContextModel = {
+    dispatch: () => null,
+    state: {
+        items: []
+    }
+}
+
+export const ListContext = React.createContext<ContextModel>(initial);

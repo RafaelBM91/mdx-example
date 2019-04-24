@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test List Component Snapshot Component 1`] = `
+<div>
+  <div
+    id="coverList"
+  >
+    <ul />
+  </div>
+  <div>
+    <label
+      className="sc-bdVaJa cxriQp"
+    >
+      Name:
+      <input
+        name="name"
+        type="text"
+      />
+    </label>
+    <label
+      className="sc-bdVaJa cxriQp"
+    >
+      Age:
+      <input
+        name="age"
+        type="number"
+      />
+    </label>
+    <label
+      className="sc-bdVaJa cxriQp"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Add Item
+      </button>
+    </label>
+  </div>
+</div>
+`;

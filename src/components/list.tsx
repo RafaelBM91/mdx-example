@@ -35,7 +35,7 @@ export const List: React.FunctionComponent<{}> = () => {
 
     return (
         <div>
-            <div>
+            <div id="coverList">
                 <ul>
                     {
                         items.map((item, index) => (
@@ -50,11 +50,11 @@ export const List: React.FunctionComponent<{}> = () => {
             <div>
                 <Field>
                     Name:
-                    <input type="text" ref={(ref) => name = ref} />
+                    <input type="text" name="name" ref={(ref) => name = ref} />
                 </Field>
                 <Field>
                     Age:
-                    <input type="number" ref={(ref) => age = ref} />
+                    <input type="number" name="age" ref={(ref) => age = ref} />
                 </Field>
                 <Field>
                     <button onClick={AddItem}>Add Item</button>
