@@ -1,6 +1,7 @@
 import * as  React from 'react';
 import { ListContext } from './context';
 import { reducer } from './reducer';
+import * as propTypes from 'prop-types';
 
 export const ProviderList: React.FunctionComponent<{}> = ({
     children
@@ -12,4 +13,8 @@ export const ProviderList: React.FunctionComponent<{}> = ({
             {children}
         </ListContext.Provider>
     );
-}
+};
+
+ProviderList.propTypes = {
+    children: propTypes.any
+};

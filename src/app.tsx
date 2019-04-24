@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Default from './markdown/default.mdx';
+import '@app/components/list';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,4 +17,4 @@ export const App: React.FunctionComponent<{}> = () => {
             <Default />
         </>
     );
-}
+};

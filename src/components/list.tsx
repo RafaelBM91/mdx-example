@@ -17,7 +17,7 @@ const Field = styled.label`
 
 export const List: React.FunctionComponent<{}> = () => {
     const { dispatch, state: { items } } = React.useContext(ListContext);
-    let name: HTMLInputElement | null = null
+    let name: HTMLInputElement | null = null;
     let age: HTMLInputElement | null = null;
 
     const AddItem = () => {
@@ -31,7 +31,7 @@ export const List: React.FunctionComponent<{}> = () => {
                 age.value = '';
             }
         }
-    }
+    };
 
     return (
         <div>
@@ -62,4 +62,4 @@ export const List: React.FunctionComponent<{}> = () => {
             </div>
         </div>
     );
-}
+};
